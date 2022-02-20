@@ -1,14 +1,21 @@
 import PropTypes from 'prop-types';
 import StatisticCard from './statisticCard';
+import s from './statistic.module.css';
 // import App from 'App';
 // import StatisticCard from './statisticCard';
 export default function Statistics({ stats, title }) {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
-      <ul className="stat-list">
+    <section className={s.statistics}>
+      {title && (
+        <h2 style={{ marginLeft: 'auto', marginRight: 'auto' }}>{title}</h2>
+      )}
+      <ul className={s.stat__list}>
         {stats.map(stat => (
-          <li className="item" key={stat.id}>
+          <li
+            className={s.item}
+            style={{ backgroundColor: getRandomHexColor() }}
+            key={stat.id}
+          >
             <StatisticCard label={stat.label} percentage={stat.percentage} />
           </li>
         ))}
@@ -27,3 +34,10 @@ Statistics.propTypes = {
     })
   ),
 };
+
+function getRandomHexColor() {
+  `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+// console.log(`#${Math.floor(Math.random() * 16777215).toString(16)}`);

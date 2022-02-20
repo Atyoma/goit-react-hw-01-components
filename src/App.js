@@ -2,7 +2,7 @@
 
 import Profile from './components/User/profile';
 import user from '../src/user.json';
-import Statistics from './components/statistics';
+import Statistics from './components/Statistics/statistics';
 import data from '../src/data.json';
 import friends from './friends';
 import FriendList from 'components/friendList';
