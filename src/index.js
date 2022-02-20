@@ -1,8 +1,14 @@
 import React from 'react';
 import App from 'App';
-import reactDom from 'react-dom';
+import ReactDom from 'react-dom';
+// import 'modern-normalize/modern-normalize.css';
 
-reactDom.render(<App />, document.querySelector('#root'));
+ReactDom.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.querySelector('#root')
+);
 
 // ===========================================================
 

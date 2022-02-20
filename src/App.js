@@ -1,6 +1,6 @@
 // =====================Profile=======================
 
-import Profile from './components/profile';
+import Profile from './components/User/profile';
 import user from '../src/user.json';
 import Statistics from './components/statistics';
 import data from '../src/data.json';
