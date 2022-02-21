@@ -1,3 +1,4 @@
+import s from './transaction.module.css';
 export default function Transaction({ type, amount, currency }) {
   return (
     <>

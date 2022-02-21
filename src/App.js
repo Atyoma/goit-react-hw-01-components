@@ -5,12 +5,13 @@ import user from '../src/user.json';
 import Statistics from './components/Statistics/statistics';
 import data from '../src/data.json';
 import friends from './friends';
-import FriendList from 'components/friendList';
+import FriendList from 'components/Friends/friendList';
 import transactions from './transactions';
-import TransactionHistory from 'components/transactionHistory';
+import TransactionHistory from 'components/Transaction/transactionHistory';
+import Container from 'components/Container/Container';
 export default function App() {
   return (
-    <div>
+    <Container>
       <Profile
         img={user.avatar}
         name={user.username}
@@ -23,15 +24,17 @@ export default function App() {
 
       <>
         <Statistics title="Upload stats" stats={data} />
-        <Statistics stats={data} />;
+        <Statistics stats={data} />
       </>
+
       <>
         <FriendList friends={friends} />
       </>
+
       <>
         <TransactionHistory items={transactions} />
       </>
-    </div>
+    </Container>
   );
 }
 
