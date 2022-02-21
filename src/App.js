@@ -8,10 +8,11 @@ import friends from './friends';
 import FriendList from 'components/Friends/friendList';
 import transactions from './transactions';
 import TransactionHistory from 'components/Transaction/transactionHistory';
-import Container from 'components/Container/Container';
+// import Container from 'components/Container/Container';
 export default function App() {
   return (
-    <Container>
+    // <Container>
+    <div>
       <Profile
         img={user.avatar}
         name={user.username}
@@ -34,7 +35,8 @@ export default function App() {
       <>
         <TransactionHistory items={transactions} />
       </>
-    </Container>
+    </div>
+    // </Container>
   );
 }
 
