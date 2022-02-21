@@ -13,7 +13,7 @@ export default function Statistics({ stats, title }) {
         {stats.map(stat => (
           <li
             className={s.item}
-            style={{ backgroundColor: getRandomHexColor() }}
+            style={{ backgroundColor: 'teal' }}
             key={stat.id}
           >
             <StatisticCard label={stat.label} percentage={stat.percentage} />
@@ -35,9 +35,9 @@ Statistics.propTypes = {
   ),
 };
 
-function getRandomHexColor() {
-  `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+// function getRandomHexColor() {
+//   `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
 
 // console.log(`#${Math.floor(Math.random() * 16777215).toString(16)}`);
