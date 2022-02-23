@@ -1,12 +1,12 @@
 // =====================Profile=======================
 
 import Profile from './components/User/profile';
-import user from '../src/user.json';
+import user from '../src/data/user.json';
 import Statistics from './components/Statistics/statistics';
-import data from '../src/data.json';
-import friends from './friends';
+import data from '../src/data/data.json';
+import friends from './data/friends';
 import FriendList from 'components/Friends/friendList';
-import transactions from './transactions';
+import transactions from './data/transactions';
 import TransactionHistory from 'components/Transaction/transactionHistory';
 // import Container from 'components/Container/Container';
 export default function App() {
@@ -18,9 +18,7 @@ export default function App() {
         name={user.username}
         tag={user.tag}
         location={user.location}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
 
       <>
